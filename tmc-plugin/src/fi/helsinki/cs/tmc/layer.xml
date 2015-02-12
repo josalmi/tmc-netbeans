@@ -60,9 +60,8 @@
         <folder name="TMC">
             <attr name="position" intvalue="1100"/>
             
-            <file name="org-netbeans-modules-project-ui-RunProject.instance">
+            <file name="fi-helsinki-cs-tmc-actions-RunProjectAction.instance">
                 <attr name="position" intvalue="100"/>
-                <attr name="instanceCreate" methodvalue="org.netbeans.modules.project.ui.actions.Actions.runProject"/>
                 <attr name="lazy" boolvalue="false" />
             </file>
             <file name="fi-helsinki-cs-tmc-actions-RunTestsLocallyAction.instance">

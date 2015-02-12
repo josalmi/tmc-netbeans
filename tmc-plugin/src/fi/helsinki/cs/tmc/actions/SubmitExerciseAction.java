@@ -1,5 +1,6 @@
 package fi.helsinki.cs.tmc.actions;
 
+import fi.helsinki.cs.tmc.data.Exercise;
 import fi.helsinki.cs.tmc.exerciseSubmitter.ExerciseSubmitter;
 import fi.helsinki.cs.tmc.model.CourseDb;
 import fi.helsinki.cs.tmc.model.ProjectMediator;
@@ -30,6 +31,15 @@ public final class SubmitExerciseAction extends AbstractExerciseSensitiveAction 
     @Override
     protected ProjectMediator getProjectMediator() {
         return projectMediator;
+    }
+
+    @Override
+    protected boolean enabledFor(Exercise exercise) {
+        if (!exercise.isRun()) {
+            return false;
+        }
+        // Overridden to not care about the deadline
+        return super.enabledFor(exercise);
     }
 
     @Override

@@ -57,6 +57,8 @@ public class Exercise implements Serializable {
     @SerializedName("valgrind_strategy")
     private ValgrindStrategy valgrindStrategy = ValgrindStrategy.FAIL;
 
+    private boolean run;
+
     public enum ValgrindStrategy {
         @SerializedName("")
         NONE,
@@ -260,6 +262,14 @@ public class Exercise implements Serializable {
 
     public ValgrindStrategy getValgrindStrategy() {
         return valgrindStrategy;
+    }
+
+    public boolean isRun() {
+        return this.run;
+    }
+
+    public void setRun(boolean run) {
+        this.run = run;
     }
 
     @Override
